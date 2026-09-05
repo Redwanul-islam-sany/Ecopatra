@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GreenPaws — Pet Food & Plant Seeds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">Free delivery on orders over ৳1,500 <span>•</span> WhatsApp: +880 1700-000000</div>
+  <header><a href="#home" class="logo">green<span>paws</span></a><button class="menu-btn" aria-label="Open menu">☰</button><nav><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#blog">Blog</a></nav><div class="actions"><button id="searchBtn" aria-label="Search">⌕</button><button id="cartBtn" aria-label="Cart">🛒 <b id="cartCount">0</b></button></div></header>
+  <main id="home">
+    <section class="hero"><div><p class="eyebrow">Nourish what you love</p><h1>Happy pets.<br><em>Thriving gardens.</em></h1><p class="hero-text">Thoughtfully selected food for every paw, and quality seeds for every patch of earth.</p><a class="btn" href="#shop">Shop now <span>→</span></a></div><div class="hero-art"><div class="sun"></div><div class="leaf leaf-a">✦</div><div class="leaf leaf-b">✿</div><div class="pet">🐕</div><div class="plant">🌿</div></div></section>
+    <section id="categories" class="section"><div class="section-head"><div><p class="eyebrow">Explore our shelves</p><h2>Shop by category</h2></div><a href="#shop">View all →</a></div><div class="categories"><button data-category="Pet Food"><span>🐾</span><b>Pet Food</b><small>For dogs & cats</small></button><button data-category="Plant Seeds"><span>🌱</span><b>Plant Seeds</b><small>Grow something good</small></button><button data-category="Accessories"><span>🦴</span><b>Pet Care</b><small>Daily essentials</small></button></div></section>
+    <section id="shop" class="section products-section"><div class="section-head"><div><p class="eyebrow">Fresh picks</p><h2>Featured products</h2></div><div class="filters"><input id="searchInput" placeholder="Search products..."/><select id="categoryFilter"><option value="All">All categories</option><option>Pet Food</option><option>Plant Seeds</option><option>Accessories</option></select><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div><div id="products" class="products"></div></section>
+    <section class="promo"><div><p class="eyebrow">Garden season is here</p><h2>Plant a little<br>joy today.</h2><a class="btn light" href="#shop">Shop seeds →</a></div><div class="promo-art">🌻<span>🌼</span>🌿</div></section>
+    <section class="section reviews"><p class="eyebrow">Loved by our community</p><h2>Small choices, happy homes.</h2><div class="review-grid"><blockquote>“My cat finally finishes every bowl. The delivery was wonderfully quick too.” <footer>— Sadia R.</footer></blockquote><blockquote>“The herb seeds sprouted in just a week. I’m genuinely delighted.” <footer>— Nabil H.</footer></blockquote><blockquote>“Simple ordering, good products, kind service.” <footer>— Farhana A.</footer></blockquote></div></section>
+    <section id="about" class="newsletter"><div><p class="eyebrow">A little green in your inbox</p><h2>Tips, treats & growing guides.</h2></div><form id="newsletterForm"><input type="email" required placeholder="Your email address"><button class="btn">Subscribe</button></form></section>
+    <section id="track" class="tracking"><div><p class="eyebrow">Already ordered?</p><h2>Track your order</h2></div><form id="trackForm"><input id="trackId" placeholder="Order ID (e.g. GP-12345)" required><input id="trackContact" placeholder="Mobile number or email" required><button class="btn">Track order</button></form><p id="trackResult"></p></section>
+  </main>
+  <footer><div class="logo">green<span>paws</span></div><p>For pets, plants, and the people who care for them.</p><a href="admin.html">Store administration →</a></footer>
+  <aside id="cartDrawer" class="drawer"><div class="drawer-head"><h2>Your cart</h2><button class="close">×</button></div><div id="cartItems"></div><div class="coupon"><input id="coupon" placeholder="Coupon code (GREEN10)"><button id="applyCoupon">Apply</button></div><div id="cartSummary"></div><button id="checkoutBtn" class="btn checkout">Proceed to checkout →</button></aside><div id="overlay"></div>
+  <dialog id="checkoutModal"><button class="dialog-close">×</button><div id="checkoutContent"></div></dialog><dialog id="productModal"><button class="dialog-close">×</button><div id="productContent"></div></dialog><div id="toast"></div>
+  <script src="app.js"></script>
+</body></html>
